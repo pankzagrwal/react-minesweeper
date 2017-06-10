@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.MineSweeper_component {
+	position: relative;
+	display: inline-block;
+	padding: 12px;
+}
+
+.box {
+	/*border: 1px solid;*/
+	width: 35px;
+	height: 35px;
+	float: left;
+	background-color: #CCC;
+}
+
+.box.ms-opened {
+	background-color: #dcdc2d;
+	box-shadow: inset 1px 1px 1px;
+	pointer-events: none;
+}
+
+.ms-row {
+	clear: both;
+    overflow: hidden;
+}
+
+.ms-bomb {
+	width: 15px;
+	height: 15px;
+	background-color: red;
+	padding: 3px;
+	animation: fadeinphoto .5s .5s;
+	-moz-animation: fadeinphoto .5s .5s;
+	-webkit-animation: fadeinphoto .5s .5s;
+	animation-iteration-count:infinite;
+}
+
+.ms-gameOver,
+.ms-gameWon {
+	pointer-events: none;
+}
+
+.ms-diffused {
+	width: 15px;
+	height: 15px;
+	background-color: black;
+	padding: 3px;
+	animation: fadeinphoto .5s .5s;
+	-moz-animation: fadeinphoto .5s .5s;
+	-webkit-animation: fadeinphoto .5s .5s;
+}
+
+.hide {
+	display: none;
+}
+
+.ms-msg {
+    
+    /* padding: 12px 0px 12px 0px; */
+    position: absolute;
+    top: 40%;
+    opacity: .8;
+    /* font-size: 16px; */
+    font-weight: bold;
+    width: 90%;
+    left: 5%;
+    text-align: center;
+}
+
+.gameFailOverlay {
+	background-color: #d04b4b;
+}
+
+.sucessOverlay {
+	background-color: lightgreen;
+}
+
+.diffuseTry {
+	float: left;
+    width: 50%;
+    text-align: center;
+    background-color: #dcc95d;
+    padding: 4px 0px;
+    font-family: fantasy;
+}
+
+.resetLayout button {
+	width: 50%;
+    display: block;
+    padding: 4px 0;
+}
+
+
+/* Animation Keyframes*/
+@keyframes fadeinphoto {
+    0% { border-radius: 0%; }
+   
+    100% { border-radius: 50% }
+}
+
+@-moz-keyframes fadeinphoto {
+    0% { border-radius: 0%; }
+   
+    100% { border-radius: 50% }
+}
+
+@-webkit-keyframes fadeinphoto {
+    0% { border-radius: 0%; }
+   
+    100% { border-radius: 50% }
+}
+
+
